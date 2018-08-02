@@ -1,0 +1,5 @@
+CREATE DATABASE TCC; 
+
+CREATE TABLE Personagem (
+    PersonID int,
+);
