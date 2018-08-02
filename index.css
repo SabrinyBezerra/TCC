@@ -1,0 +1,35 @@
+h1{
+  color:black
+}
+
+button{
+  border-right: small inline;
+  border-top: small inline;
+	border-left: small inline;
+	border-bottom: small inline;
+  font-weight: bold;
+  font-size: 10pt;
+  border-color: #FFFFFF;
+  font-family: Trebuchet MS, Verdana, Arial, Helvetica;
+  width: 1350px;
+  height: 200px;
+  background-color: #CD853F}
+
+#div1 {
+    background-image: url("https://png.pngtree.com/element_origin_min_pic/17/09/04/cedf78758aac32d17bb4cc4fa9f3cceb.jpg");
+    background-repeat: repeat-x;
+
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+/*#div2 {
+    background-image: url("https://image.freepik.com/vetores-gratis/os-graficos-coloridos_23-2147514909.jpg");
+    background-repeat: repeat-y;
+    background-position: left;
+    height: 50%;
+    width: 80%;
+    position: absolute;}
+
+
+
