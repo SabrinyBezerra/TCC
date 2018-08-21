@@ -1,0 +1,48 @@
+-- Table: public."MyData"
+
+-- DROP TABLE public."MyData";
+
+CREATE TABLE public."MyData"
+(
+    id integer,
+    pesid character varying(50) COLLATE pg_catalog."default",
+    data_inversa character varying(50) COLLATE pg_catalog."default",
+    dia_semana character varying(50) COLLATE pg_catalog."default",
+    horario character varying(50) COLLATE pg_catalog."default",
+    uf character varying(2) COLLATE pg_catalog."default",
+    br character varying(50) COLLATE pg_catalog."default",
+    km character varying(50) COLLATE pg_catalog."default",
+    municipio character varying(50) COLLATE pg_catalog."default",
+    causa_principal character varying(3) COLLATE pg_catalog."default",
+    causa_acidente character varying(100) COLLATE pg_catalog."default",
+    ordem_tipo_acidente integer,
+    tipo_acidente character varying(50) COLLATE pg_catalog."default",
+    classificacao_acidente character varying(100) COLLATE pg_catalog."default",
+    fase_dia character varying(50) COLLATE pg_catalog."default",
+    sentido_via character varying(50) COLLATE pg_catalog."default",
+    condicao_metereologica character varying(50) COLLATE pg_catalog."default",
+    tipo_pista character varying(50) COLLATE pg_catalog."default",
+    tracado_via character varying(50) COLLATE pg_catalog."default",
+    uso_solo character varying(3) COLLATE pg_catalog."default",
+    id_veiculo character varying(50) COLLATE pg_catalog."default",
+    tipo_veiculo character varying(50) COLLATE pg_catalog."default",
+    marca character varying(50) COLLATE pg_catalog."default",
+    ano_fabricacao_veiculo character varying(50) COLLATE pg_catalog."default",
+    tipo_envolvido character varying(50) COLLATE pg_catalog."default",
+    estado_fisico character varying(50) COLLATE pg_catalog."default",
+    idade character varying(50) COLLATE pg_catalog."default",
+    sexo character varying(50) COLLATE pg_catalog."default",
+    ilesos integer,
+    feridos_leves integer,
+    feridos_graves integer,
+    mortos integer,
+    latitude character varying(50) COLLATE pg_catalog."default",
+    longitude character varying(50) COLLATE pg_catalog."default"
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public."MyData"
+    OWNER to postgres;
