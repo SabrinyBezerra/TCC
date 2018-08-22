@@ -1,3 +1,5 @@
+//Importacao dos dados do arquivo csv para o pgAdmin 
+
 -- Table: public."MyData"
 
 -- DROP TABLE public."MyData";
@@ -46,3 +48,8 @@ TABLESPACE pg_default;
 
 ALTER TABLE public."MyData"
     OWNER to postgres;
+    
+  
+  
+  //Primeira Consulta para formar graficos
+  select uf, count(uf) from public."MyData" group by uf
