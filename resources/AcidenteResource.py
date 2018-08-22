@@ -9,3 +9,5 @@ class AcidenteResource(Resource):
         primeiroAcidente = acidente.find_one() #consulta
         primeiroAcidente["_id"] = JSONEncoder().default(primeiroAcidente["_id"])
         return primeiroAcidente
+
+    
