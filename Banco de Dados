@@ -53,3 +53,6 @@ ALTER TABLE public."MyData"
   
   //Primeira Consulta para formar graficos
   select uf, count(uf) from public."MyData" group by uf
+  
+  //Consulta por Br
+  select br, count(br) from public."MyData" group by br
