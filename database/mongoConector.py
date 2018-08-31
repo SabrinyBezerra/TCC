@@ -6,8 +6,5 @@ cliente = MongoClient(MONGODB_URI)
 
 db = cliente.get_database('test')
 
-acidente = db.acidente #coleção
+acidente = db.acidente 
 
-#result = acidente.find_one()
-
-#print(result)
