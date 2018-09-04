@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="app">
+    <head>
+        <meta charset="UTF-8">
+        <title>Nicks</title>
+        
+        <!-- Estilo css personalizado  -->
+        <link rel="stylesheet" href="plugins/materialize/css/icones.css">
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="shortcut icon" href="img/favicon.ico">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <!-- Importando jQuery e seus componentes -->
+        <script src="plugins/jquery/jquery-3.3.1.min.js"></script>
+        
+        <!-- Importando materialize -->
+        <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+        <script src="plugins/materialize/init.js"></script>
+        
+                  
+        <!-- Importando angular e seus derivados -->
+        <script src="plugins/angular/angular.min.js"></script>
+        <script src="plugins/angular/ui-router.min.js"></script>
+
+        <!--Chartjs e Angularjs-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+        
+        
+        <!-- Importando componentes personalizados do angular -->
+        <script src="js/app.js"></script>
+        <script src="js/controllers/systemController.js"></script>
+        <script src="js/services/systemService.js"></script>
+       
+    </head>
+    <body>
+        <!-- vizualização das páginas -->
+
+        
+
+
+
+        
+        <nav>
+            <div class="nav-wrapper teal navbar-fixed">
+                <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <a href="#" class="brand-logo center">ACIDENTES</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                </ul>
+            </div>
+            </nav>
+            
+
+        <ul id="slide-out" class="sidenav sidenav-fixed">
+                <li><div class="user-view">
+                  <div class="background">
+                    <img src="https://paulista07.files.wordpress.com/2015/08/geek-wallpaper-1920x1080_0.jpg?w=593">
+                  </div>
+                  <a href="#user"><img class="circle" src="https://avatarfiles.alphacoders.com/115/115681.jpg"></a>
+                  <a href="#name"><span class="white-text name">PEDRO HENRIQUE</span></a>
+                  <a href="#email"><span class="white-text email">SABRINY</span></a>
+                  <a href="#email"><span class="white-text email">PROFESSORA</span></a>
+                </div></li>
+                <li><a href="#!"><i class="material-icons">cloud</i>Dashboard</a></li>
+                <li><div class="divider"></div></li>
+                <li><a class="subheader">Gráficos</a></li>
+                <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+              </ul>
+              
+              <center>
+              <main ng-controller="systemCtrl">
+                    <canvas id="pie" class="chart chart-pie"
+                        chart-data="data" chart-labels="labels" chart-options="options">
+                    </canvas> 
+                    <button ng-click="verifica()">VERIFICAR REQUISIÇÃO</button>
+              </main>
+            </center>
+        
+        
+    </body>
+</html>
