@@ -2,14 +2,11 @@
 <html lang="pt-br" ng-app="app">
     <head>
         <meta charset="UTF-8">
-        <title>Nicks</title>
-        
-        <!-- Estilo css personalizado  -->
-        <link rel="stylesheet" href="plugins/materialize/css/icones.css">
-        <link rel="stylesheet" href="css/app.css">
-        <link rel="shortcut icon" href="img/favicon.ico">
-
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Dashboard</title>
+                
+        <!-- Estilo css personalizado  -->
+        <link rel="stylesheet" href="css/app.css">
 
         <!-- Importando jQuery e seus componentes -->
         <script src="plugins/jquery/jquery-3.3.1.min.js"></script>
@@ -24,13 +21,14 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
         <script src="plugins/materialize/init.js"></script>
         
-                  
+        <!-- Chartjs -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+                            
         <!-- Importando angular e seus derivados -->
         <script src="plugins/angular/angular.min.js"></script>
         <script src="plugins/angular/ui-router.min.js"></script>
-
-        <!--Chartjs e Angularjs-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+        <script src="plugins/angular/angular-chart.min.js"></script>
+        
         
         
         <!-- Importando componentes personalizados do angular -->
@@ -39,12 +37,8 @@
         <script src="js/services/systemService.js"></script>
        
     </head>
-    <body>
+    <body ng-controller="systemCtrl">
         <!-- vizualização das páginas -->
-
-        
-
-
 
         
         <nav>
@@ -70,15 +64,25 @@
                 <li><a href="#!"><i class="material-icons">cloud</i>Dashboard</a></li>
                 <li><div class="divider"></div></li>
                 <li><a class="subheader">Gráficos</a></li>
-                <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+                <li><a class="waves-effect" ng-click="verifica()">Número de Acidentes por UF</a></li>
               </ul>
               
               <center>
-              <main ng-controller="systemCtrl">
-                    <canvas id="pie" class="chart chart-pie"
-                        chart-data="data" chart-labels="labels" chart-options="options">
-                    </canvas> 
-                    <button ng-click="verifica()">VERIFICAR REQUISIÇÃO</button>
+              <main>
+                    <div ng-if="requisicao" class="preloader-wrapper big active" style="position: relative; margin-top: 15px">
+                            <div class="spinner-layer spinner-blue-only">
+                              <div class="circle-clipper left">
+                                <div class="circle"></div>
+                              </div><div class="gap-patch">
+                                <div class="circle"></div>
+                              </div><div class="circle-clipper right">
+                                <div class="circle"></div>
+                              </div>
+                            </div>
+                          </div>
+                   <div class="chart-container" style="position: relative; height:40vh; width:70vw" >
+                        <canvas id="myChart"></canvas>
+                   </div> 
               </main>
             </center>
         
