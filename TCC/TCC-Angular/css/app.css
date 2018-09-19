@@ -9,3 +9,8 @@ canvas{
   position: relative;
   left: 15%;
 }
+
+.sidenav{
+  width: 290px !important;
+  margin-top: 0px !important;
+}
