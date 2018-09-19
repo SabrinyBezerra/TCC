@@ -20,67 +20,22 @@ app.controller('systemCtrl', function($scope, systemService){
    
    $scope.criaGrafico = function(){ 
     
-    console.log('OK')
-    let labels = [
-        acidente[0][0],  
-			acidente[1][0], 
-			acidente[2][0], 
-		    acidente[3][0],  
-            acidente[4][0],  
-            acidente[5][0],  
-            acidente[6][0],  
-            acidente[7][0],  
-            acidente[8][0],  
-            acidente[9][0], 
-            acidente[10][0],  
-            acidente[11][0], 
-            acidente[12][0], 
-            acidente[13][0],  
-            acidente[14][0],  
-            acidente[15][0],  
-            acidente[16][0],  
-            acidente[17][0],  
-            acidente[18][0],  
-            acidente[19][0],  
-            acidente[20][0],  
-            acidente[21][0],  
-            acidente[22][0],  
-            acidente[23][0],  
-            acidente[24][0],  
-            acidente[25][0],  
-            acidente[26][0] 
-    ]
+    /* Acidentes Labels */
+    let acidentesLabel = []
+    for(ac in acidente){
+        acidentesLabel.push(acidente[ac][0])
+        console.log(acidentesLabel[ac]);
+    }
 
-    let data = [
-        acidente[0][1],  
-			acidente[1][1], 
-			acidente[2][1], 
-		    acidente[3][1],  
-            acidente[4][1],  
-            acidente[5][1],  
-            acidente[6][1],  
-            acidente[7][1],  
-            acidente[8][1],  
-            acidente[9][1], 
-            acidente[10][1],  
-            acidente[11][1], 
-            acidente[12][1], 
-            acidente[13][1],  
-            acidente[14][1],  
-            acidente[15][1],  
-            acidente[16][1],  
-            acidente[17][1],  
-            acidente[18][1],  
-            acidente[19][1],  
-            acidente[20][1],  
-            acidente[21][1],  
-            acidente[22][1],  
-            acidente[23][1],  
-            acidente[24][1],  
-            acidente[25][1],  
-            acidente[26][1]
-        
-    ]
+    /*Acidentes data*/ 
+    let acidentesData = []
+    for(ac in acidente){
+        acidentesData.push(acidente[ac][1])
+    }
+
+    console.log('OK')
+    let labels = acidentesLabel
+    let data = acidentesData
         let myChart = new Chart(ctx, {
             type: 'pie',
             data: {
@@ -121,7 +76,7 @@ app.controller('systemCtrl', function($scope, systemService){
             options: {
                 title: {
                    display: true,
-                   fontsize: 14,
+                   fontSize: 28,
                    text: 'Número de acidentes por UF'
                },
                legend: {
@@ -134,4 +89,5 @@ app.controller('systemCtrl', function($scope, systemService){
           });
    }
 
+  
 });
